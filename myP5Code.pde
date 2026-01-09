@@ -4,15 +4,19 @@ void setup() {
 }
 
 //🎯Variable Declarations Go Here
-
+    var mercuryX = 45;
 
 //🟢Draw Procedure - Runs on Repeat
 draw = function(){
  
   background(255,255,255,0);
   
-
-
+  //mercury
+ fill(100, 100, 100)
+ 
+    ellipse(mercuryX, 150, 126, 99);
+    ellipse(mercuryX-20, 130,45,30);
+    ellipse(mercuryX+20, 130, 30, 50);
 
 
 
