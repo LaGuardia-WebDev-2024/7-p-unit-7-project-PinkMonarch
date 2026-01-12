@@ -8,15 +8,40 @@ void setup() {
 
 //🟢Draw Procedure - Runs on Repeat
 draw = function(){
- 
+
   background(255,255,255,0);
   
+    noStroke();
   //mercury
  fill(100, 100, 100)
  
-    ellipse(mercuryX, 150, 126, 99);
-    ellipse(mercuryX-20, 130,45,30);
-    ellipse(mercuryX+20, 130, 30, 50);
+    ellipse(mercuryX, 150, 50, 50);
+   //left eye
+    fill(72,72,72)
+    ellipse(mercuryX-12, 143,20,20);
+   //right eye
+    ellipse(mercuryX+12, 143, 20,20);
+   //mouth
+   fill(255,255,255)
+    ellipse(mercuryX+1, 163, 30, 12);
+   fill(255,128,150)
+    arc(mercuryX+1,168,21,12,radians(180),radians(360));
+    //pupil
+    fill(0,0,0)
+    ellipse(mercuryX-13,143,10,10);
+    ellipse(mercuryX+13,142,10,10);
+
+
+    mercuryX= mercuryX + 3.5
+
+
+
+
+
+
+
+
+
 
 
 
