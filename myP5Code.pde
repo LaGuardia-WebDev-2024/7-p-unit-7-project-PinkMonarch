@@ -5,6 +5,8 @@ void setup() {
 
 //🎯Variable Declarations Go Here
     var mercuryX = 45;
+    var venusSize= -25;
+
 
 //🟢Draw Procedure - Runs on Repeat
 draw = function(){
@@ -27,23 +29,35 @@ draw = function(){
    fill(255,128,150)
     arc(mercuryX+1,168,21,12,radians(180),radians(360));
     //pupil
-    fill(0,0,0)
+    fill(255,255,255)
     ellipse(mercuryX-13,143,10,10);
     ellipse(mercuryX+13,142,10,10);
+    fill(0,0,0)
+    ellipse(mercuryX+11,142,6,7);
+    ellipse(mercuryX-15,142,6,7);
+    mercuryX= mercuryX + 3.5;
 
+    //venus
+    fill(255,198,73)
 
-    mercuryX= mercuryX + 3.5
-
-
-
-
-
-
-
-
-
-
-
+    ellipse(venusSize, 150, 65,65);
+    //left eye
+    fill(255,181,104)
+    ellipse(venusSize+12, 143, 25, 25);
+    //right eye
+    ellipse(venusSize-16, 140, 25, 25);
+    //pupils
+    fill(255,140,0)
+    ellipse(venusSize-19, 136, 12, 12);
+    ellipse(venusSize+9, 140, 12, 12);
+    fill(0,255,255)
+    
+    //mouth
+    fill(220,125,0)
+    ellipse(venusSize-5,165,30,20);
+    fill(255,179,78)
+    arc(venusSize-5,174,22,18,radians(180),radians(360));
+    venusSize= venusSize + 3.7
 
   //Show x y values when mousepressed
   if(mousePressed){showXYPositions();}
