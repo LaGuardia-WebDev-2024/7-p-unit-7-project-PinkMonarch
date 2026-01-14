@@ -6,6 +6,12 @@ void setup() {
 //🎯Variable Declarations Go Here
     var mercuryX = 45;
     var venusSize= -25;
+    var earthX= -80;
+    var marsY = -150;
+
+
+
+
 
 
 //🟢Draw Procedure - Runs on Repeat
@@ -59,6 +65,41 @@ draw = function(){
     arc(venusSize-5,174,22,18,radians(180),radians(360));
     venusSize= venusSize + 3.7
 
+    //earth
+    fill(40, 122, 184)
+    ellipse(earthX, 150,65,65);
+    fill(56,78,29)
+    ellipse(earthX-25,143,10,40);
+    ellipse(earthX+20, 155,20,60);
+    //eyes
+    fill(255,255,255)
+    ellipse(earthX+12,143,15,40);
+    ellipse(earthX-12,143,15,40);
+    //pupil
+    fill(0,0,255)
+    ellipse(earthX+8,139,8,20);
+    ellipse(earthX-16,136,8,20);
+    //mouth
+    fill(16,5,164)
+    ellipse(earthX+1,173,30,20);
+    fill(75,66,201)
+    arc(earthX+2,181,26,20,radians(180),radians(360));
+    earthX=earthX + 3.5
+
+    //mars
+    fill(156,46,53)
+    ellipse(marsY, 180, 40,40);
+
+
+
+
+
+
+ 
+ 
+ 
+
+    marsY =marsY + 3.9
   //Show x y values when mousepressed
   if(mousePressed){showXYPositions();}
 
