@@ -7,8 +7,9 @@ void setup() {
     var mercuryX = 45;
     var venusSize= -25;
     var earthX= -80;
-    var marsY = -150;
-
+    var marsY = -180;
+    var sunS = 100;
+    var colorShade=0;
 
 
 
@@ -84,22 +85,47 @@ draw = function(){
     ellipse(earthX+1,173,30,20);
     fill(75,66,201)
     arc(earthX+2,181,26,20,radians(180),radians(360));
-    earthX=earthX + 3.5
+    earthX=earthX + 5
 
     //mars
     fill(156,46,53)
     ellipse(marsY, 180, 40,40);
+    //eyes
+    fill(179,48,0)
+    ellipse(marsY-10,175,15,20);
+    ellipse(marsY+10,178,15,20);
+    //pupils
+    fill(255,0,0)
+    ellipse(marsY+7,174,9,9);
+    ellipse(marsY-11,170,9,9);
+    //mouth
+    fill(228,81,81)
+    ellipse(marsY+3,192,20,3,radians(180),radians(360));
+    marsY=marsY+8
+
+  //sun
+  fill(255 +colorShade,196+colorShade,0+colorShade);
+  ellipse(30, 200, sunS, sunS);
+ fill(255,255,30)
+ 
 
 
-
-
-
+  sunS=sunS+1.9
+  colorShade=colorShade - 1;
+  if(sunS>600){
+     mercuryX = 45;
+     venusSize= -25;
+     earthX= -80;
+     marsY = -180;
+     sunS = 100;
+     colorShade=0;
+  }
 
  
  
  
 
-    marsY =marsY + 3.9
+    //marsY =marsY + 3.9
   //Show x y values when mousepressed
   if(mousePressed){showXYPositions();}
 
