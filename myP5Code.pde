@@ -107,11 +107,13 @@ draw = function(){
   fill(255 +colorShade,196+colorShade,0+colorShade);
   ellipse(30, 200, sunS, sunS);
  fill(255,255,30)
+  quad(-10,199,230,199,255,244,145,244)
+
  
 
 
-  sunS=sunS+1.9
-  colorShade=colorShade - 1;
+ sunS=sunS+1.9
+ colorShade=colorShade - 1;
   if(sunS>600){
      mercuryX = 45;
      venusSize= -25;
